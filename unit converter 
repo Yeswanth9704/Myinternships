@@ -1,0 +1,213 @@
+def unit_converter():
+    print("welcome to unit converter")
+    print("what do you want to convert")
+    print("1.length")
+    print("2.volume")
+    print("3.time")
+    print("4.weight")
+    choice_1 = int(input("enter your choice 1-4:"))
+#length conversion
+    if choice_1 == 1:
+        def length_converter():
+            print("what do you want to convert into")
+        print("1.kilometers into miles")
+        print("2.miles into kilometers")
+        print("3.centimeters into inches")
+        print("4.inches into centimeters")
+        print("5.meters into yards")
+        print("6.yards into meters")
+        print("7.meters into feet")
+        print("8.feets into meters")
+        choice_2 = int(input("enter your choice 1-8:"))
+        if choice_2 == 1:
+            km = float(input("enter length in kilometers:"))
+            miles = km * 0.621371
+            print("{} kilometer(s) is equal to {} miles".format(km, miles))
+        elif choice_2 == 2:
+            miles = float(input("enter length in miles:"))
+            km = miles * 1.609
+            print("{} equals to {} kilometers".format(miles, km))               
+        elif choice_2 == 3:
+            cm = float(input("enter the length in centimeters:"))
+            inch = cm *0.394
+            print("{} centimeters is equals to {} inches".format(cm, inch))
+        elif choice_2 == 4:
+            inch = float(input("enter the length in inches:"))
+            cm = inch*2.540
+            print("{} inches are equal to {} centimeters".format(inch, cm))
+        elif choice_2 == 5:
+            meter = float(input("enter the length in meters:"))
+            yard = meter *1.094
+            print("{} meters are equals to {} yards".format(meter, yard))
+        elif choice_2 == 6:
+            yard = float(input("enter the length in yards:"))
+            meter = yard*0.914
+            print("{} yards equals to {} meters".format(yard, meter))
+        elif choice_2 == 7:
+            meter = float(input("enter the length in neter:"))
+            feet = meter*3.281
+            print('{} meters are equals to {} feet'.format(meter, feet))
+        elif choice_2 == 8:
+            feet = float(input("enter the length in feets:"))
+            meter = feet*0.305
+            print("{} feet are equals to {} meters".format(feet, meter))
+        else:
+            print("invalid option, please select the option between 1 to 8")
+            length_converter()
+        print("did you want to continue")
+        print("yes or no")
+        option_1 =input("whats your answer:")
+        if option_1.lower() == 'yes':
+            length_converter()
+        elif option_1.lower() == 'no':
+            unit_converter()
+        else:
+            print("invalid option")
+#volume conversion
+    elif choice_1 == 2:
+        def volume_converter():
+            print("what do you want to convert into")
+        print("1.liters into milliliters")
+        print("2.milliliters into liters")
+        print("3.liters into gallons")
+        print("4.gallons into liters")
+        print("5.milliliters into gallons")
+        print("6.gallons into milliliters")
+        choice_3 =int(input("enter your choice 1-6:"))
+        if choice_3 == 1:
+            liter =float(input("enter the volume in liters:"))
+            ml = liter*1000
+            print("{} liters equals to {} milliliters".format(liter, ml))
+        elif choice_3 == 2:
+            ml = float(input("enter the volume in milliliters"))
+            liter = ml*0.001
+            print("{} milliliters equals to {} liters".format(ml, liter))
+        elif choice_3 == 3:
+            liter = float(input("enter the volume in liters:"))
+            gallon = liter*0.220
+            print("{} liters equals to {} gallons".format(litre, gallon))
+        elif choice_3 == 4:
+            gallon = float(input("enter the volume in gallons"))
+            liter = gallon*4.546
+            print("{} gallons equals to {} liters".format(gallon, liter))
+        elif choice_3 == 5:
+            ml = float(input("enter the volume in milliliters"))
+            gallon =mi*0.000220
+            print("{} milliliters equals to {} gallons".format(ml, gallon))
+        elif choice_3 == 6:
+            gallon = float(input("enter the volume in gallons"))
+            ml = gallon*4546
+            print("{} gallons equals to {} milliliters".format(gallon, ml))
+        else:
+            print("invalid option, please enter the valid option between 1-5")
+            volume_converter()
+        print("did you want to continue")
+        print("yes or no")
+        option_2 =input("whats your answer:")
+        if option_2.lower() == 'yes':
+            volume_converter()
+        elif option_2.lower() == 'no':
+            unit_converter()
+        else:
+            print("invalid option")
+#time conversion
+    elif choice_1 == 3:
+        def time_conversion():
+            print("what do you want to convert")
+        print("1.minutes into seconds")
+        print("2.hours into minutes")
+        print("3.seconds into minutes")
+        print("4.days into hours")
+        print("5.hours into days")
+        print("6.weeks into days")
+        choice_4 =int(input("enter your choice 1-6:"))
+        if choice_4 == 1:
+            mins = float(input("enter the time in minutes"))
+            sec = mins*60
+            print("{} minutes equals to {} seconds".format(mins, sec))
+        elif choice_4 == 2:
+            hour = float(input("enter the time in hours"))
+            mins = hour*60
+            print("{} hours equals to {} minutes".format(hour, mins))
+        elif choice_4 == 3:
+            sec = float(input("enter the time in seconds:"))
+            mins = round(sec*0.0167)
+            print("{} seconds equals to {} minutes".format(sec, mins))
+        elif choice_4 == 4:
+            day = float(input("enter the time in days:"))
+            hour = day*24
+            print("{} days equals to {} hours".format(day, hour))
+        elif choice_4 == 5:
+            hour = float(input("enter the time in hours:"))
+            days = round(hour*0.04167)
+            print("{} hours equals to approx {} days".format(hour, days))
+        elif choice_4 == 6:
+            week = float(input("enter the time in weeks:"))
+            day = week*7
+            print("{} weeks equals to {} days".format(week, day))
+        else :
+            print("invalid option!, please enter the value between 1-6")
+            time_conversion()
+        print("did you want to continue")
+        print("yes or no")
+        option_3 =input("whats your answer:")
+        if option_3.lower() == 'yes':
+            return time_conversion()
+        elif option_3.lower() == 'no':
+           return unit_converter()
+        else:
+            print("invalid option")
+#weight converter
+    elif choice_1 == 4:
+        def weight_convertor():
+            print("what do you want to convert")
+        print("1.kilograms into grams")
+        print("2.grams into kilograms")
+        print("3.kilograms into pounds")
+        print("4.pounds into kilograms")
+        print("5.kilograms into quintals")
+        print("6.quintals int kilograms")
+        choice_5 =int(input("enter your option 1-6:"))
+        if choice_5 == 1:
+            kg = float(input("enter the weight in kgs:"))
+            gram = kg*1000
+            print("{} kilograms equals to {} grams".format(kg, gram))
+        elif choice_5 == 2:
+            gram = float(input("enter the weight in grams:"))
+            kg = gram*0.001
+            print("{} grams equals to {} kilograms".format(gram, kg))
+        elif choice_5 == 3:
+            kg = float(input("enter the weight in kilograms:"))
+            pound = kg*2.205
+            print("{} kilograms equals to {} pounds".format(kg, pound))
+        elif choice_5 == 4:
+            pound = float(input("enter the weight in pounds:"))
+            kg = pound*0.454
+            print("{} pounds equals to {} kilograms".format(pound, kg))
+        elif choice_5 == 5:
+            kg = float(input("enter the weight in terms of kg:"))
+            quintal = kg*0.10
+            print("{} kilograms equals to {} quintals".format(kg, quintal))
+        elif choice_5 == 6:
+            quintal = float(input("enter the weight in quintals:"))
+            kg = quintal*100
+            print("{} quintals equals to {} kilograms".format(quintal, kg))
+        else:
+            print("invalid option, please enter valid option between 1-6")
+            weight_convertor()
+        print("did you want to continue")
+        print("yes or no")
+        option_4 =input("whats your answer:")
+        if option_4.lower() == 'yes':
+            return weight_convertor()
+        elif option_4.lower() == 'no':
+           return unit_converter()
+        else:
+            print("invalid option")
+    else:
+        print("invalid option please enter a valid option between 1-4")
+unit_converter()
+            
+
+        
+                      
